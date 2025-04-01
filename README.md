@@ -21,7 +21,13 @@ root@footballcscdroplet:~/footballproj# source .venv/bin/activate
 /root/footballproj/.venv/bin/python
 (.venv) root@footballcscdroplet:~/footballproj# 
 
-
+# /////////GITHUB/////////////
+git init
+git add .
+git commit -m "your message"
+git branch -M main
+git remote add origin git remote add origin https://noelleeon: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@github.com/noelleeon/footballcsc.git
+git push -u origin main --force
 
 # Install Djangoi
 python3 -m venv .venv
