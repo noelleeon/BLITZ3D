@@ -62,5 +62,3 @@ Tank is your snarky, grizzled AI football coach who answers historical NFL quest
 
 ---
 
-## 📂 Project Structure
-
