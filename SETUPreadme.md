@@ -3,15 +3,15 @@
 # DigitalOcean. 
 
 ### IF PIP IS BEING TRASH DO THIS
-(.venv) root@footballcscdroplet:~/footballproj# deactivate
-root@footballcscdroplet:~/footballproj# rm -rf .venv
-root@footballcscdroplet:~/footballproj# python3 -m venv .venv
-root@footballcscdroplet:~/footballproj# source .venv/bin/activate
-(.venv) root@footballcscdroplet:~/footballproj# which pip
+(.venv) root@footballdroplet:~/footballproj# deactivate
+root@footballdroplet:~/footballproj# rm -rf .venv
+root@footballdroplet:~/footballproj# python3 -m venv .venv
+root@footballdroplet:~/footballproj# source .venv/bin/activate
+(.venv) root@footballdroplet:~/footballproj# which pip
 /root/footballproj/.venv/bin/pip
-(.venv) root@footballcscdroplet:~/footballproj# which python
+(.venv) root@footballdroplet:~/footballproj# which python
 /root/footballproj/.venv/bin/python
-(.venv) root@footballcscdroplet:~/footballproj# 
+(.venv) root@footballdroplet:~/footballproj# 
 
 ### Install Django
 python3 -m venv .venv
