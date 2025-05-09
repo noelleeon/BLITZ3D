@@ -1,6 +1,6 @@
 # 🏈 Blitz3D
 
-Blitz3D is a full-stack American football web application built with **Django** and **Python**, designed to deliver real-time news, game data, and community discussion for fans. It’s a one-stop site for **dirt** (breaking NFL news), **den** (live chatroom for fans), and **data** (stats and records from across the league’s history). It also features **Tank**, a grumpy AI coach who answers your historical football questions with no patience and less sympathy.
+Blitz3D is a full-stack American football web application built with **Django** and **Python**, designed to deliver real-time news, game data, and community discussion for fans. It’s a one-stop site for **dirt** (breaking NFL news), **den** (fan created articles), and **data** (stats for your favorite teams + players, and live play by play + scores for each game). It also features **Tank**, a grumpy AI coach who answers your historical football questions with no patience and less sympathy.
 
 ---
 
