@@ -1,0 +1,27 @@
+#teamlogo {
+  position: absolute;
+  top: 40vh;
+  width:100px;
+  height:100px;
+}
+#teamword {
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  width:200px;
+  height:auto;
+}
+#teamname {
+  position: absolute;
+  top: 20vh;
+  font-size: 50px;
+}
+#roster {
+  position: absolute;
+  top: 50vh;
+  font-size: 12px;
+}
+#playerpic {
+  height: 50px;
+  width: auto;
+}
