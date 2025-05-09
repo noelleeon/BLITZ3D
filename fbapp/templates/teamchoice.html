@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'teamchoice.css' %}">
+</head>
+<body>
+  <!-- https://docs.djangoproject.com/en/5.1/ref/templates/language/ -->
+  <img id="logo" src={{ espnLogo1 }}/>
+  <h1 id="teamname">{{ teamName }}</h1>
+  <h1 id="teamabv">{{ teamAbv }}</h1>
+  <h1 id="teamcity">{{ teamCity }}</h1>
+  <h1 id="conference">{{ conferenceAbv }}</h1>
+  <h1 id="division">{{ division }}</h1>
+  <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro -->
+  <table id="rushing">
+    <tr>
+      <th>Rush Yards</th>
+      <th>Carries</th>
+      <th>Rush TD</th>
+    <tr>
+      <td>{{ rushYds }}</td>
+      <td>{{ carries }}</td>
+      <td>{{ rushTD }}</td>
+    </tr>
+  </table>
+
+  <table id="kicking">
+    <tr>
+      <th>FG Attempts</th>
+      <th>FG Made</th>
+      <th>FG Yards</th>
+      <th>Kick Yards</th>
+      <th>XP Attempts</th>
+      <th>XP Made</th>
+    <tr>
+      <td>{{ fgAttempts }}</td>
+      <td>{{ fgMade }}</td>
+      <td>{{ fgYds }}</td>
+      <td>{{ kickYards }}</td>
+      <td>{{ xpAttempts }}</td>
+      <td>{{ xpMade }}</td>
+    </tr>
+  </table>
+
+  <table id="passing">
+    <tr>
+      <th>Pass Attempts</th>
+      <th>Pass TD</th>
+      <th>Pass Yards</th>
+      <th>Intercept</th>
+      <th>Pass Completions</th>
+    <tr>
+      <td>{{ passAttempts }}</td>
+      <td>{{ passTD }}</td>
+      <td>{{ passYds }}</td>
+      <td>{{ intercept }}</td>
+      <td>{{ passCompletions }}</td>
+    </tr>
+  </table>
+
+  <table id="punts">
+    <tr>
+      <th>Punt Yards</th>
+      <th>Punts</th>
+    <tr>
+      <td>{{ puntYds }}</td>	 
+      <td>{{ punts }}</td>
+    </tr>
+  </table>
+
+  <table id="receiving">
+    <tr>
+      <th>Receptions</th>
+      <th>Receiving TD</th>
+      <th>Targets</th>
+      <th>Receiving Yards</th>
+    <tr>
+      <td>{{ receptions }}</td>
+      <td>{{ recTD }}</td>
+      <td>{{ targets }}</td>
+      <td>{{ recYds }}</td>
+    </tr>
+  </table>
+
+  <table id="defense">
+    <tr>
+      <th>Fumbles Lost</th>
+      <th>Fumbles Recovered</th>
+      <th>Defense TD</th>
+      <th>QB Hits</th>
+      <th>Pass Deflections</th>
+      <th>Total Tackles</th>
+    <tr>
+      <td>{{ fumblesLost }}</td>
+      <td>{{ fumblesRecovered }}</td>
+      <td>{{ defTD }}</td>
+      <td>{{ qbHits }}</td>
+      <td>{{ passDeflections }}</td>
+      <td>{{ totalTackles }}</td>
+    </tr>
+  </table>
+</body>
+</html>
