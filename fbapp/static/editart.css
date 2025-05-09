@@ -1,0 +1,15 @@
+.makeCont {
+  position: relative;
+  top: 20vh;
+  height: 70vh;
+  width: 86%;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 20px;
+  padding: 40px;
+}
+.artform {
+  height: 100%;
+  width 100%;
+}
+
