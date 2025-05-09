@@ -1,0 +1,16 @@
+{% extends "bheader.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'playerchoice.css' %}">
+{% endblock %}
+<body>
+  <!-- https://teamtreehouse.com/community/i-need-help-to-loop-through-a-list-and-print-each-value-in-a-html-unordered-list-using-a-flask-app -->
+  <!-- https://stackoverflow.com/questions/74811878/passing-django-variables-as-parameters-into-href-url -->
+  {% block content %}
+  <h1>{{ playerID }}</h1>
+  {% endblock %}
+
+</body>
+</html>
