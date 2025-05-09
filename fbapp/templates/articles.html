@@ -1,0 +1,29 @@
+{% extends "bheader.html" %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'articles.css' %}">
+{% endblock %}
+{% block content %}
+<div>
+   <form class="formadd" action="{% url 'arthelper' %}" method="post">
+      {% csrf_token %}
+      <button type="submit" name="artButton" class="addButton" value="holder">Add New Article</button>
+    </form>
+    <div class="prevCards">
+      {% for article in allarts %}
+      <div key={{ article.id }} class="prevCard">
+        <p class="artTitle">{{ article.arttitle }}</p>
+	<p class="artAuthor">{{ article.author }}</p>
+        <p class="artcontent">{{ article.content }}</p>
+	<form action="/article/{{ article.id }}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="moreButtonO" name="articleID" value="{{ article.id }}">
+            <p class="readMoreO">Read More</p>
+          </button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+{% include "tankbar.html" %}
+{% endblock %}
