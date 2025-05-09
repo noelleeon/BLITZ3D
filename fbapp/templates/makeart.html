@@ -1,11 +1,16 @@
-{% extends "searchnav.html" %}
-<!DOCTYPE html>
-<html>
-<body>
-
-  {% block content %}
-    <h1>sheeeeeeeeeeesh</h1>
-  {% endblock %}
-
-</body>
-</html>
+{% extends "bheader.html" %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'makeart.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="makeCont">
+    <form action="/makeart/" method="POST" class="artform">
+      {% csrf_token %}
+      <input id="arttitle" type="text" name="arttitle" class="arttitle" placeholder="Title...">
+      <input id="artcontent" type="text" name="artcontent" class="artcontent" placeholder="Your article goes here, yada yada yada...">
+      <input type="submit" value="Submit" class="artbutton">
+    </form>
+  </div>
+{% endblock %}
+{% include 
