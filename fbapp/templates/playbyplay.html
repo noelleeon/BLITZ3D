@@ -1,0 +1,19 @@
+{% extends "games.html" %}
+{% load static %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'games.css' %}">
+{% endblock %}
+{% block content %}
+  <div id="allGame" class="allGame" data-allgame={{ allGame }}/>
+  <h1 id="match-name">Loading...</h1>
+  <p id="nowplay"></p>
+  <p id="homename"></p>
+  <p id="awayname"></p>
+  <p id="currentperiod"></p>
+  <p id="gameclock"></p>
+  <p id="homepoints"></p>
+  <p id="awaypoints"></p>
+  <p id="dandd"></p>
+  <script type="text/javascript" src="{% static 'playbyplay.js' %}"></script>
+{% endblock content %}
