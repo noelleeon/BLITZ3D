@@ -1,11 +1,221 @@
-{% extends "searchnav.html" %}
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "bheader.html" %}
+{% load static %}
 
-  {% block content %}
-    <h1>sheeeeeeeeeeesh</h1>
-  {% endblock %}
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'stat.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<div class="allCont">
+  <div class="teamSCont">
+    <h1 class="teamTitle">Team Stats</h1>
+    <select name="team" id="team" class="teammenu">
+      <option selected="selected" disabled>Teams</option>
+      <option value="1">Arizona Cardinals</option>
+      <option value="2">Atlanta Falcons</option>
+      <option value="3">Baltimore Ravens</option>
+      <option value="4">Buffalo Bills</option>
+      <option value="5">Carolina Panthers</option>
+      <option value="6">Chicago Bears</option>
+      <option value="7">Cincinnati Bengals</option>
+      <option value="8">Cleveland Browns</option>
+      <option value="9">Dallas Cowboys</option>
+      <option value="10">Denver Broncos</option>
+      <option value="11">Detroit Lions</option>
+      <option value="12">Green Bay Packers</option>
+      <option value="13">Houston Texans</option>
+      <option value="14">Indiana Colts</option>
+      <option value="15">Jacksonville Jaguar</option>
+      <option value="16">Kansas City Chiefs</option>
+      <option value="17">Las Vegas Raiders</option>
+      <option value="18">Los Angeles Chargers</option>
+      <option value="19">Los Angeles Rams</option>
+      <option value="20">Miami Dolphin</option>
+      <option value="21">Minnesota Vikings</option>
+      <option value="22">New England Patriots</option>
+      <option value="23">New Orleans Saints</option>
+      <option value="24">New York Giants</option>
+      <option value="25">New York Jets</option>
+      <option value="27">Philadelphia Eagles</option>
+      <option value="26">Pittsburgh Steelers</option>
+      <option value="28">San Francisco 49ers</option>
+      <option value="29">Seattle Seahawks</option>
+      <option value="30">Tampa Bay Buccaneers</option>
+      <option value="31">Tennessee Titans</option>
+      <option value="32">Washington Commanders</option>
+    </select>
+
+    <img id="tlogo" class="tlogo" src=""/>
+    <h1 id="teamname" class="teamname"></h1>
+    <h1 id="teamcity" class="teamcity"></h1>
+    <h1 id="conference" class="conference"></h1>
+    <h1 id="division" class="division"></h1>
+    <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro -->
+    <table id="rushing" class="rushing">
+      <tr>
+        <th>Rush Yards</th>
+        <th>Carries</th>
+        <th>Rush TD</th>
+      </tr>
+      <tr>
+        <td id="rushYds"></td>
+        <td id="carries"></td>
+        <td id="rushTD"></td>
+      </tr>
+    </table>
+
+    <table id="kicking" class="kicking">
+      <tr>
+        <th>FG Attempts</th>
+        <th>FG Made</th>
+        <th>FG Yards</th>
+        <th>Kick Yards</th>
+        <th>XP Attempts</th>
+        <th>XP Made</th>
+      </tr>
+      <tr>
+        <td id="fgAttempts"></td>
+        <td id="fgMade"></td>
+        <td id="fgYds"></td>
+        <td id="kickYards"></td>
+        <td id="xpAttempts"></td>
+        <td id="xpMade"></td>
+      </tr>
+    <table id="passing" class="passing">
+      <tr>
+        <th>Pass Attempts</th>
+        <th>Pass TD</th>
+        <th>Pass Yards</th>
+        <th>Intercept</th>
+        <th>Pass Completions</th>
+      </tr>
+      <tr>
+        <td id="passAttempts"></td>
+        <td id="passTD"></td>
+        <td id="passYds"></td>
+        <td id="intercept"></td>
+        <td id="passCompletions"></td>
+      </tr>
+    </table>
+
+    <table id="punts" class="punts">
+      <tr>
+        <th>Punt Yards</th>
+        <th>Punts</th>
+      </tr>
+      <tr>
+        <td id="puntYds"></td>
+        <td id="puntsNum"></td>
+      </tr>
+    </table>
+
+    <table id="receiving" class="receiving">
+      <tr>
+        <th>Receptions</th>
+        <th>Receiving TD</th>
+        <th>Targets</th>
+        <th>Receiving Yards</th>
+      </tr>
+      <tr>
+        <td id="receptions"></td>
+        <td id="recTD"></td>
+        <td id="targets"></td>
+        <td id="recYds"></td>
+      </tr>
+    </table>
+    <table id="defense" class="defense">
+      <tr>
+        <th>Fumbles Lost</th>
+        <th>Fumbles Recovered</th>
+        <th>Defense TD</th>
+        <th>QB Hits</th>
+        <th>Pass Deflections</th>
+        <th>Total Tackles</th>
+      </tr>
+      <tr>
+        <td id="fumblesLost"></td>
+        <td id="fumblesRecovered"></td>
+        <td id="defTD"></td>
+        <td id="qbHits"></td>
+        <td id="passDeflections"></td>
+        <td id="totalTackles"></td>
+      </tr>
+    </table>
+    <div class="teamfiller"></div>
+  </div>
+
+  <div class="playerCont">
+    <h1 class="playerTitle">Player Stats</h1>
+    <input id="stext" class="stext" type="search" name="stext">
+    <select name="steam" id="steam" class="splayerteam">
+      <option selected="selected" disabled value="">Teams</option>
+      <option value="1">Arizona Cardinals</option>
+      <option value="2">Atlanta Falcons</option>
+      <option value="3">Baltimore Ravens</option>
+      <option value="4">Buffalo Bills</option>
+      <option value="5">Carolina Panthers</option>
+      <option value="6">Chicago Bears</option>
+      <option value="7">Cincinnati Bengals</option>
+      <option value="8">Cleveland Browns</option>
+      <option value="9">Dallas Cowboys</option>
+      <option value="10">Denver Broncos</option>
+      <option value="11">Detroit Lions</option>
+      <option value="12">Green Bay Packers</option>
+      <option value="13">Houston Texans</option>
+      <option value="14">Indiana Colts</option>
+      <option value="15">Jacksonville Jaguar</option>
+      <option value="16">Kansas City Chiefs</option>
+      <option value="17">Las Vegas Raiders</option>
+      <option value="18">Los Angeles Chargers</option>
+      <option value="19">Los Angeles Rams</option>
+      <option value="20">Miami Dolphin</option>
+      <option value="21">Minnesota Vikings</option>
+      <option value="22">New England Patriots</option>
+      <option value="23">New Orleans Saints</option>
+      <option value="24">New York Giants</option>
+      <option value="25">New York Jets</option>
+      <option value="27">Philadelphia Eagles</option>
+      <option value="26">Pittsburgh Steelers</option>
+      <option value="28">San Francisco 49ers</option>
+      <option value="29">Seattle Seahawks</option>
+      <option value="30">Tampa Bay Buccaneers</option>
+      <option value="31">Tennessee Titans</option>
+      <option value="32">Washington Commanders</option>
+    </select>
+    <select name="sposition" id="sposition" class="sposition">
+      <option selected="selected" disabled value="">Position</option>
+      <option value="QB">QB</option>
+      <option value="RB">RB</option>
+      <option value="WR">WR</option>
+      <option value="TE">TE</option>
+      <option value="K">K</option>
+    </select>
+    <select name="ssort" id="ssort" class="ssort">
+      <option selected="selected" disabled value="">Sort By</option>
+      <option value="team">Team</option>
+      <option value="name">Name</option>
+      <option value="age">Age</option>
+    </select>
+    <button id="searchbutton" class="searchbutton" type="button">Search</button>
+    <div class="ptCont">
+      <table id="playerstable" class="playerstable">
+        <tr>
+          <th>Headshot</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Position</th>
+          <th>Team</th>
+          <th>Jersey Number</th>
+          <th>Profile</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="playercard"></div>
+  </div>
+  <div class="spacer"></div>
+  <script type="text/javascript" src="{% static 'stats.js' %}"></script>
+</div>
+{% include "tankbar.html" %}
+{% endblock %}
