@@ -1,0 +1,166 @@
+@font-face {
+  font-family: dashcrazyfont;
+  src: url('/static/fonts/Supercharge3D-GO79P.otf');
+}
+@font-face {
+   font-family: dashmobilecrazyfont;
+   src: url('/static/fonts/Supercharge-JRgPo.otf');
+}
+.threeblocks {
+  position: absolute;
+  top: 20vh;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 98vw;
+  height: 50vh;
+  gap: 2%;
+  left: 1vw;
+}
+.articlesCont, .gamesCont, .statsCont {
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 8px;
+  width: 33%;
+  height: 65vh;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.artcontentCont, .gamescontentCont, .statscontentCont {
+  position: relative;
+  background-color: #000b81;
+  border: 3px solid white;
+  border-radius: 8px;
+  width: 70%;
+  height: clamp(45vh, 45vh, 350vh);
+  margin: 0 auto;
+  color: white;
+  padding: 2vh;
+  font-family: Helvetica;
+  z-index: 4;
+}
+.artCont {
+  position: absolute;
+  height: 70%;
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  overflow-Y: clip;
+}
+.dirtButton, .denButton, .dataButton {
+  position: absolute;
+  background-color: #e60303;
+  border: 3px solid white;
+  border-radius: 8px;
+  margin: 0 auto;
+  bottom: 5%;
+  height: 10% !important;
+  width: 90%;
+  color: white;
+  font-family: Helvetica;
+  z-index: 5;
+  cursor: pointer;
+}
+.articleTitle, .gamesTitle, .statsTitle {
+  font-family: 'dashcrazyfont';
+  color: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: clamp(20px, 3vh, 70px);
+}
+.articlesCont {
+
+}
+.articleTitle {
+
+}
+.artcontentCont {
+	
+}
+.dirtButton {
+      
+}
+.gamesCont {
+
+}
+.gamesTitle {
+
+}
+.gamescontentCont {
+	
+}
+.denButton {
+
+}
+.statsCont {
+
+}
+.statsTitle {
+
+}
+.statscontentCont {
+	
+}
+.dataButton {
+
+}
+@media (max-width: 800px) {
+  html, body {
+     overflow-x: clip;
+     overflow-y: auto;
+  }
+  .threeblocks {
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 2%;
+  }
+  .articlesCont, .gamesCont, .statsCont {
+     width: 100%;
+     margin-bottom: 2%;
+  }
+  .statsCont {
+     margin-bottom: 15vh;
+  }
+  .articleTitle, .gamesTitle, .statsTitle {
+     font-family: 'dashmobilecrazyfont';
+     font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  html, body {
+     overflow-x: clip;
+     overflow-y: auto;
+  }
+  .threeblocks {
+     top: 40vw;
+     width: 90%;
+     margin-left:4%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 2%;
+  }
+  .articlesCont, .gamesCont, .statsCont {
+     width: 100%;
+     margin-bottom: 5%;
+  }
+  .statsCont {
+     margin-bottom: 15vh;
+  }
+  .artcontentCont, .gamescontentCont, .statscontentCont {
+     height: 70%;
+     margin-top: 6vw;
+  }
+  .dirtButton, .denButton, .dataButton {
+     margin-top: 4%;
+     height: 20%;
+  }
+  .articleTitle, .gamesTitle, .statsTitle {
+     font-size: 8vw;
+  }
+}
