@@ -1,20 +1,64 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-
-<h1>BLITZ3D: DIRT, DEN, DATA</h1>
-<p>Sign in to ball!</p>
-
-  <div>
-    <form>
-      <label for="username"> Username:</label><br />
-      <input type="text" id="username" name="username" value="uzerrrrname"/><br />
-      <label for="password"> Password:</label><br />    
-      <input type="text" id="password" name="password" value="pazzzzword"/>            
-      <input type="submit" value="Log In">
-    </form>
-    <button>Don't have an account? Sign up</button>
+{% extends "bheader.html" %}
+{% load static %}
+{% block extra_head %}
+   <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
+{% block content %}
+<div class="fieldCont">
+  <button class="bgoalTop">WHAT THE FANS WANT</button>
+  <form action="/signup/" class="formUP" method="POST">
+    {% csrf_token %}
+    <div class="btoplTen">
+      <p class="toplTen">10</p>
+      <p class="toprTen">10</p>
+      <input type="text" id="usernameup" class="usernamef" name="username" placeholder="joeshmoe123..."></input>
+    </div>
+    <div class="btoplTwenty">
+      <p class="toplTwenty">20</p>
+      <p class="toprTwenty">20</p>
+      <input type="password" id="passwordup" class="passwordf" name="password" placeholder="*********"></input>
+    </div>
+    <div class="btoplThirty">
+      <p class="toplThirty">30</p>
+      <p class="toprThirty">30</p>
+      <button type="submit" class="subButtons" value="Sign Up">Sign Up</button>
+    </div>
+  </form>
+  <div class="btoplFourty">
+    <p class="toplFourty">40</p>
+    <p class="toprFourty">40</p>
   </div>
-</body>
-</html>
+  <div class="bspace">
+    <p class="blitzTitle">Blizt3D</p>
+  </div>
+  <div class="blFifty">
+    <p class="lFifty">50</p>
+    <p class="rFifty">50</p>
+  </div>
+  <div class="bbottomlFourty">
+    <p class="bottomlFourty">40</p>
+    <p class="bottomrFourty">40</p>
+  </div>
+  <form action="/signin/" class="formIN"  method="POST">
+    {% csrf_token %}
+    <div class="bbottomlThirty">
+      <p class="bottomlThirty">30</p>
+      <p class="bottomrThirty">30</p>
+      <input type="username" id="usernamein" class="usernamef" name="username" placeholder="joeshmoe123..."></input>
+    </div>
+    <div class="bbottomlTwenty">
+      <p class="bottomlTwenty">20</p>
+      <p class="bottomrTwenty">20</p>
+      <input type="password" id="passwordin" class="passwordf" name="password" placeholder="*********"></input>
+    </div>
+    <div class="bbottomlTen">
+      <p class="bottomlTen">10</p>
+      <p class="bottomrTen">10</p>
+      <button type="submit" class="subButtons" value="Sign In">Sign In</button>
+    </div>
+  </form>
+  <div class="bgoalBottom">WHAT THE FANS NEED</div>
+  <div>
+</div>
+{% endblock %}
