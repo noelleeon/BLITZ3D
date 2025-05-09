@@ -1,0 +1,79 @@
+@font-face {
+   font-family: addcrazyfont;
+   src: url('/static/fonts/Supercharge-JRgPo.otf');
+}
+.formadd {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  top: 16vh;
+}
+.addButton {
+  position: absolute;
+  display: block;
+  left: 15vw;
+  height: 6vh;
+  width: 70vw;
+  background-color: #000b81;
+  border: 3px solid white;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  font-family: "addcrazyfont";
+}
+.prevCards {
+  position: relative;
+  top: 23vh;
+  left: 0;
+  padding-top: 2vw;
+  padding-bottom: 150px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 30%);
+  grid-auto-rows: minmax(325px, auto);
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: center;
+  z-index: 1;
+}
+.prevCard {
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.05);
+  border-width: thin;
+  position: relative;
+  border-color: rgba(158, 158, 158, .5);
+  overflow-wrap: break-word;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+}
+.artcontent {
+  height: 50%;
+  overflow: clip;
+}
+.moreButtonO {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  height: 13%;
+  padding-left: 5%;
+  width: 80%;
+  background-color: #000b81;
+  color: white;
+  border: solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.moreButtonO p {
+  position: absolute;
+  height: 90%;
+  padding: 0;
+  top: -15%;
+}
