@@ -1,11 +1,45 @@
-{% extends "searchnav.html" %}
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "bheader.html" %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'dashboard.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
 
-  {% block content %}
-    <h1>sheeeeeeeeeeesh</h1>
-  {% endblock %}
+{% include "tankbar.html" %}
+{% block content %}
+  <div id="threeblocks" class="threeblocks">
+    <div class="articlesCont">
+      <p class="articleTitle">Articles</p>
+      <div class="artcontentCont">
+        <div class="artCont">Read from your fellow superfans about the latest opinions and news!</div>
+	<form action="{% url 'articles' %}" method="post">
+          {% csrf_token %}
+          <button class="dirtButton">Dirt</button>
+        </form>
+      </div>
+    </div>
 
-</body>
-</html>
+    <div class="gamesCont">
+      <p class="gamesTitle">Games</p>
+      <div class="gamescontentCont">
+	<div class="artCont">See weekly schedule and watch play by play calls.</div>
+        <form action="{% url 'games' %}" method="post">
+          {% csrf_token %}
+          <button class="denButton">Den</button>
+	</form>
+      </div>
+    </div>
+
+    <div class="statsCont">
+      <p class="statsTitle">Statistics</p>
+      <div class="statscontentCont">
+	<div class="artCont">See statistics on your favorite players and teams.</div>
+        <form action="{% url 'stat' %}" method="post">
+          {% csrf_token %}
+          <button class="dataButton">Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% include "tankbar.html" %}
+{% endblock %}
