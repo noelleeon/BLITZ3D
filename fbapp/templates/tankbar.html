@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--https://stackoverflow.com/questions/39217669/how-to-avoid-inline-javascript-->
+   <link rel="stylesheet" type="text/css" href="{% static 'tank.css' %}">
+   {% block extra_head %}{% endblock %}
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="bottomBar">
+    <p class="coachTank">Coach Tank</p>
+    <button class="tankButton" id="tankButton">Tank</button> 
+    <!-- I had to set the style here or I had to click twice to display-->    
+    <div id="appearDiv" style="display: none;">
+      <p class="tankTalk">I'm here to coach you in whatever questions you got about football so you don't sound like a clown.</p>
+      <form>
+        <input id="question" type="text" name="question" class="questionBar">
+	<button id="askButton" type="button" value="Ask" class="askButton">Ask</button>
+      </form>
+      <div class="answerCont">
+        <div class="answer" id="answer"></div>
+      </div>
+    </div>
+  </div>
+
+  {% block content %}
+ 
+  {% endblock %}
+  
+  </body>
+  <script type="text/javascript" src="{% static 'appearscript.js' %}"></script>
+</html>
