@@ -1,0 +1,50 @@
+.artCont {
+  position: relative;
+  top: 20vh;
+  height: 60vh;
+  width: 86%;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: scroll;
+}
+.artTitle {
+  font-size: 36px;
+  color: white;
+}
+.artAuthor {
+  font-size: 18px;
+  color: white;
+}
+.artcontent {
+  font-size: 16px;
+  color: white;
+}
+.articles {
+  position: absolute;
+  top: 15vh;
+  left: 90vw;
+  font-weight: bold;
+  color: #000b81;
+}
+.editB, .deleteB {
+  position: absolute;
+  height: 10%;
+  width: 25%;
+  background-color: #e60303;
+  border: 3px solid white;
+  border-radius: 8px;
+}
+.editB {
+  top: 80%;
+  left: 40px;
+  color: white;
+  font-weight: bold;
+}
+.deleteB {
+  top: 80%;
+  right: 40px;
+  color: white;
+  font-weight: bold;
+}
