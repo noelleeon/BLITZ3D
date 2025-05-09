@@ -24,12 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-sm^+vv9@9&5l4if_4b_^xv1&oen517&+u!trf**19z5yij26t^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,9 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fbapp',
     'channels',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +55,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://blitz3d.net",
+    "blitz3d.net",
 ]
 
 ROOT_URLCONF = 'footballproj.urls'
@@ -84,10 +90,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'USER':'doadmin',
-        'PASSWORD':os.environ.get('PASSWORD'), 
-        'HOST':os.environ.get('HOST'),
-        'PORT':os.environ.get('PORT'),
-        'NAME':'defaultdb',
+        'PASSWORD':os.environ.get(''), 
+        'HOST':os.environ.get(''),
+        'PORT':os.environ.get(''),
+        'NAME':'',
         'SSLMODE':'required',     
     }
 }
