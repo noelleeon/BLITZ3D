@@ -1,11 +1,23 @@
-{% extends "searchnav.html" %}
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "bheader.html" %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'article.css' %}">
+{% endblock %}
+{% block content %}
+<div>
+  <a href="/articles/" class="articles">Return to Articles</a>
+  <div class="artCont">
+    <p class="artTitle">{{ article.arttitle }}</p>
+    <p class="artAuthor">{{ article.author }}</p>
+    <p class="artcontent">{{ article.content }}</p>
+    {% if artpermission == 'yes' %}
+       <form action="/deleteart/" method="post">
+	 {% csrf_token %}
+	 <button type="submit" name="deleteart" class="deleteB" value={{ article.id }}>Delete</button>
+       </form>
+    {% endif %}
+  </div>
+</div>
+{% include "tankbar.html" %}
+{% endblock %}
 
-  {% block content %}
-    <h1>sheeeeeeeeeeesh</h1>
-  {% endblock %}
-
-</body>
-</html>
