@@ -1,0 +1,170 @@
+@font-face {
+   font-family: dangerfont;
+   src: url('/static/fonts/DangerOnTheMotorway-xV10.ttf');
+}
+@font-face {
+   font-family: sportfont;
+   src: url('/static/fonts/RaceSport-BWPLV.ttf');
+}
+@font-face {
+   font-family: timefont;
+   src: url('/static/fonts/TimelessSeriesPersonalUse-ZV298.ttf');
+}
+.nogames {
+  color: white;
+  font-size: 40px;
+}
+.everythingCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.everythingCont::-webkit-scrollbar {
+  display: none;
+}
+.gamesCont {
+  position: absolute;
+  top: 20vh;
+  width: 20vw;
+  height: 66vh;
+  left: 3vw;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+.weekmenu {
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: black;
+  color: white;
+  border: solid white;
+  border-radius: 10px;
+  font-size: 18px;
+}
+#gamesList {
+  position: absolute;
+  top: 17%;
+  height: 80%;
+  width: 90%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify: space-between;
+}
+.gamebutton {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.allGame {
+  position: absolute;
+  top: 18vh;
+  width: 70vw;
+  height: 68vh;
+  right: 3vw;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 50vh;
+}
+.boardPlay, .boardPeriod, .boardClock,
+.boardHome, .boardAway {
+  position: absolute !important;
+  border: 3px solid white !important;
+  border-radius: 8px;
+  color: #fbe806 !important; 
+}
+.boardPlay {
+  top: 5% !important;
+  height: 30% !important;
+  width: 94% !important;
+  left: 3% !important;
+}
+.boardPeriod, .boardClock,
+.boardHome, .boardAway {
+  height: 25% !important;
+  width: 35% !important;
+}
+.boardClock {
+  text-align: center;
+  top: 40% !important;
+  left: 10% !important;
+}
+.boardPeriod {
+  left: 55% !important;
+  top: 40% !important;
+  text-align: center;
+  font-size: 40px;
+  font-family: "dangerfont";
+}
+.boardHome {
+  top: 70% !important;
+  left: 10% !important;
+  text-align: center;
+  font-family: "dangerfont";
+  font-size: 36px;
+}
+.boardAway {
+  top: 70% !important;
+  left: 55% !important;
+  font-size: 36px;
+  text-align: center;
+  font-family: "dangerfont";
+}
+.currentPlay, .period, .gameclock,
+.homepoints, .awaypoints {
+  color: #fbe806;
+}
+.currentPlay {
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  font-family: "dangerfont";
+  margin: 2%;
+}
+@media (max-width: 700px) {
+  html, body {
+    overflow-Y: scroll;
+    padding-bottom: 50px;
+    height: 110vh;
+  }
+  .allGame {
+    width: 94%;
+    left: 2%;
+    height: 55%;
+    top: 40%;
+  }
+  .gamesCont {
+    width: 94%;
+    height: 20%;
+    left: 2%;
+    top: 17%;
+  }
+  .weekmenu {
+    height: 20%;
+    margin-top: 2%;    
+  }
+  #gamesList {
+    position: absolute;
+    top: 31%;
+    height: 53%;
+    flex-direction: unset;
+    align-items: unset;
+    justify: space-between;
+    overflow-X: scroll;
+  }
+  .gamebutton {
+   
+  }
+}
