@@ -1,0 +1,266 @@
+@font-face {
+   font-family: hcrazyfont;
+   src: url('/static/fonts/Supercharge-JRgPo.otf');
+}
+* {
+  overflow: scroll;
+  overflow-x: clip;
+}
+html, body {
+  background-color: #189927;
+}
+.fieldCont {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 120vh;
+  margin-top: 20vh;
+  border: 3px solid white;
+  box-sizing: border-box;
+  overflow: clip;
+}
+.bgoalTop, .bgoalBottom {
+  position: absolute;
+  height: 8.33%;
+  width: 100%;
+  background-color: #e60303;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'hcrazyfont';
+  font-size: 5vh;
+  overflow: clip;
+}
+.bgoalBottom {
+  top: 91.5%;
+  text-align: center;
+  vertical-align: middle;
+}
+.formUP {
+  position: absolute;
+  height: 25%;
+  top: 8.5%;
+  left: -.5%;
+  width: 101%;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-color: white;
+  background-color: #189927;
+  overflow: visible !important;
+}
+.formIN {
+  position: absolute;
+  height: 25%;
+  width: 101%;
+  top: 66.4%;
+  left: -.5%;
+  box-sizing: border-box;
+  border: 3px solid white;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+.subButtons {
+  overflow: clip;
+}
+.subButtons, .usernamef, .passwordf {
+  position: absolute;
+  height: 50% !important;
+  width: 60% !important;
+  left: 20%;
+  top: 25%;
+  background-color: #000b81 !important;
+  color: white !important;
+  border: 3px solid white !important;
+  border-radius: 8px !important;
+}
+::placeholder {
+  color: white;
+  margin-left: 5px;
+}
+.usernamef, .passwordf {
+  padding-left: 5px;
+}
+.btoplFourty {
+  z-index: 1;
+}
+.btoplThirty {
+  z-index: 2;
+}
+.btoplTwenty {
+  z-index: 3;
+}
+.btoplTen {
+  z-index: 4;
+}
+.btoplFourty, .bltopThirty, .bltopTwenty, .bltopThirty {
+  overflow: visible !important;
+  z-index: 1;
+}
+.btoplTen, .btoplTwenty, .btoplThirty, .bbottomlTen,
+.bbottomlTwenty, .bbottomlThirty{
+  position: absolute;
+  height: 33.33%;
+  width: 100%;
+  border: 3px solid white;
+  background-color: #189927;
+  border-right: 3px solid white;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+.btoplTen {
+  top: 0;
+}
+.btoplTwenty {
+  top: 33.333333333333%;
+}
+.btoplThirty {
+  top: 66.6666667%;
+}
+.bbottomlThirty {
+  top: 0;
+}
+.bbottomlTwenty {
+  top: 33.333333333333%;
+}
+.bbottomlTen {
+  top: 66.6666667%;
+}
+.btoplFourty, .bspace, .blFifty, .bbottomlFourty {
+  position: absolute;
+  height: 8.33%;
+  width: 100%;
+  background-color: #189927;
+  border: 3px solid white;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+.btoplFourty {
+  top: 33.33%;
+}
+.bspace {
+  top: 41.6667%;
+}
+.blFifty {
+  top: 50% !important;
+}
+.bbottomlFourty {
+  top: 58.33%;
+}
+.toplTen, .toplTwenty, .toplThirty, .toplFourty,
+.lFifty, .bottomlFourty, .bottomlThirty, .bottomlThirty,
+.bottomlTwenty, .bottomlTen {
+  position: absolute;
+  transform: rotate(-90deg);  
+  font-family: Helvetica !important;
+  font-weight: bold !important;
+  font-size: 5vh !important;
+  color: white !important;
+  left: 0;
+  overflow: visible !important;
+  letter-spacing: 1vh;
+}
+.toprTen, .toprTwenty, .toprThirty, .toprFourty,
+.rFifty, .bottomrFourty, .bottomrThirty, .bottomrThirty,
+.bottomrTwenty, .bottomrTen {
+  position: absolute;
+  letter-spacing: 1vh;
+  transform: rotate(90deg);
+  font-family: Helvetica !important;
+  font-weight: bold !important;
+  font-size: 5vh !important;
+  color: white !important;
+  right: 0;
+  overflow: visible !important;
+}
+.toplTen, .toplTwenty, .toplThirty, .toplFourty {
+  bottom: -85%;
+  overflow: visible !important;
+}
+.toprTen, .toprTwenty, .toprThirty, .toprFourty {
+  bottom: -95%;
+  overflow: visible !important;
+}
+.bottomlTen, .bottomlTwenty, .bottomlThirty, .bottomlFourty {
+  bottom: 25%;
+}
+.bottomrTen, .bottomrTwenty, .bottomrThirty, .bottomrFourty {
+  bottom: 12%;
+}
+.lFifty {
+  bottom: 25% !important;
+}
+.rFifty {
+  bottom: 15%;
+}
+.blitzTitle {
+  position: absolute;
+  bottom: -20%;
+  font-size: 3vw;
+  color: white;
+  z-index: 10;
+  font-family: 'hcrazyfont';
+  background-color: #189927;
+  bottom: -75%;
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  overflow: clip;
+}
+@media (max-width:900px){
+ 
+}
+@media (max-width:700px){
+  .bgoalTop, .bgoalBottom {
+    font-size: 6vw;
+  }
+  .bgoalBottom {
+    padding-top: 8%;
+  }
+  .fieldCont {
+    width: 90vw;
+    margin-right: 7vw;
+    margin-left: 3vw;
+  }
+  .toplTen, .toplTwenty, .toplThirty, .toplFourty,
+  .lFifty, .bottomlFourty, .bottomlThirty, .bottomlThirty,
+  .bottomlTwenty, .bottomlTen {
+    left: -2%;
+    font-size: 6vw !important;
+    letter-spacing: 2vh;
+  }
+  .toprTen, .toprTwenty, .toprThirty, .toprFourty,
+  .rFifty, .bottomrFourty, .bottomrThirty, .bottomrThirty,
+  .bottomrTwenty, .bottomrTen {
+    right: -2%;
+    font-size: 6vw !important;
+    letter-spacing: 2vh;
+  }
+  .toplTen, .toplTwenty, .toplThirty, .toplFourty {
+    bottom: -42%;
+  }
+  .toprTen, .toprTwenty, .toprThirty, .toprFourty {
+    bottom: -64%;
+  }
+  .bottomlTen, .bottomlTwenty, .bottomlThirty, .bottomlFourty {
+    bottom: 65%;
+  }
+  .bottomrTen, .bottomrTwenty, .bottomrThirty, .bottomrFourty {
+    bottom: 47%;
+  }
+  .lFifty {
+    bottom: 64% !important;
+  }
+  .rFifty {
+    bottom: 43%;
+  }
+  .blitzTitle {
+    font-size: 10vw;
+    width: 70%;
+    left: 15%;
+  }
+}
