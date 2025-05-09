@@ -1,0 +1,45 @@
+.makeCont {
+  position: relative;
+  top: 20vh;
+  height: 70vh;
+  width: 86%;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 20px;
+  padding: 40px;
+}
+.artform {
+  height: 100%;
+  width 100%;
+}
+.arttitle, .artcontent {
+  background-color: #000b81;
+  border: 3px solid white;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+.arttitle {
+  position: absolute;
+  top: 5%;
+  height: 10%;
+  width: 60%;
+  left: 5%;
+  margin-bottom: 20px;
+}
+.artcontent {
+  position: absolute;
+  height: 60% !important;
+  width: 80% !important;
+  bottom: 40px;
+  left: 10%;
+}
+.artbutton {
+  position: absolute;
+  top: 5%;
+  width: 15%;
+  height: 10%;
+  right: 5%;
+  border: 3px solid white;
+  border-radius: 8px;
+}
