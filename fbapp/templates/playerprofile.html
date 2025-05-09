@@ -1,0 +1,55 @@
+{% extends "bheader.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'playerprofile.css' %}">
+{% endblock %}
+<body>
+  <!-- https://teamtreehouse.com/community/i-need-help-to-loop-through-a-list-and-print-each-value-in-a-html-unordered-list-using-a-flask-app -->
+  <!-- https://stackoverflow.com/questions/74811878/passing-django-variables-as-parameters-into-href-url -->
+  {% block content %}
+  <div id="playersdiv">
+    <table id="playerstable" class="playerstable">
+      <thead>
+        <tr>
+  	  <th>Headshot</th>
+	  <th>Name</th>
+ 	  <th>Jersey Number</th>
+          <th>Fantasy Points</th>
+	</tr>
+      </thead>
+      <tbody>
+        {% for player in page_obj %}
+        <tr>
+	  <td><img src="{{ player.espnHeadshot }}" id="playerimg"></td>
+ 	  <td><a href="{% url 'playerchoice' player.playerID %}">{{ player.espnName }}</a></td>
+	  <td>{{ player.jerseyNum }}</td>
+	  <td>{{ player.fantasy }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div id="pagination" class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
+  {% endblock %}
+
+</body>
+</html>
