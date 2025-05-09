@@ -1,0 +1,107 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--https://stackoverflow.com/questions/39217669/how-to-avoid-inline-javascript-->
+   <link rel="stylesheet" type="text/css" href="{% static 'bheader.css' %}">
+   {% block extra_head %}{% endblock %}
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="menuField">
+    <div class="menuBar">
+      <a href="/dash/" class="dashLink">Dashboard</a>
+      <a href="/stat/" class="statsLink">Statistics</a>
+      <a href="/articles/" class="articlesLink">Articles</a>
+      <a href="/games/" class="gamesLink">Red Zone</a>
+      <form action="{% url 'signout' %}" method="post">
+        {% csrf_token %}
+        <button class="logoutLink">Log Out</button>
+      </form>
+    </div>
+    <div class="flagMenu"></div>
+  </div>
+  <div class="headerBar">
+	  <img src="{% static 'imgs/blitz3dlogo.jpg' %}" class="logo">
+    <p class="blitztitle">BLITZ3D: DIRT, DEN, DATA</p>
+
+    <div class="tickerCont">
+      <div class="tickernews">
+        <a href="{{ newz.0.link }}">
+           <span class="newsfont">{{ newz.0.title }}</span>
+        </a>
+        <a href="{{ newz.1.link }}">
+           <span class="newsfont">{{ newz.1.title }}</span>
+        </a>
+        <a href="{{ newz.2.link }}">
+           <span class="newsfont">{{ newz.2.title }}</span>
+        </a>
+        <a href="{{ newz.3.link }}">
+           <span class="newsfont">{{ newz.3.title }}</span>
+        </a>
+        <a href="{{ newz.4.link }}">
+           <span class="newsfont">{{ newz.4.title }}</span>
+        </a>
+        <a href="{{ newz.5.link }}">
+           <span class="newsfont">{{ newz.5.title }}</span>
+        </a>
+        <a href="{{ newz.6.link }}">
+           <span class="newsfont">{{ newz.6.title }}</span>
+        </a>
+        <a href="{{ newz.7.link }}">
+           <span class="newsfont">{{ newz.7.title }}</span>
+        </a>
+        <a href="{{ newz.8.link }}">
+           <span class="newsfont">{{ newz.8.title }}</span>
+        </a>
+        <a href="{{ newz.9.link }}">
+           <span class="newsfont">{{ newz.9.title }}</span>
+        </a>
+        <a href="{{ newz.10.link }}">
+           <span class="newsfont">{{ newz.10.title }}</span>
+        </a>
+        <a href="{{ newz.11.link }}">
+           <span class="newsfont">{{ newz.11.title }}</span>
+        </a>
+        <a href="{{ newz.12.link }}">
+           <span class="newsfont">{{ newz.12.title }}</span>
+        </a>
+        <a href="{{ newz.13.link }}">
+           <span class="newsfont">{{ newz.13.title }}</span>
+        </a>
+        <a href="{{ newz.14.link }}">
+           <span class="newsfont">{{ newz.14.title }}</span>
+        </a>
+        <a href="{{ newz.15.link }}">
+           <span class="newsfont">{{ newz.15.title }}</span>
+        </a>
+        <a href="{{ newz.16.link }}">
+           <span class="newsfont">{{ newz.16.title }}</span>
+        </a>
+        <a href="{{ newz.17.link }}">
+           <span class="newsfont">{{ newz.17.title }}</span>
+        </a>
+        <a href="{{ newz.18.link }}">
+           <span class="newsfont">{{ newz.18.title }}</span>
+        </a>
+        <a href="{{ newz.19.link }}">
+           <span class="newsfont">{{ newz.19.title }}</span>
+        </a>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% static 'mobilehover.js' %}"></script>
+  </div>
+  {% block content %}
+
+  {% endblock %}
+
+  </body>
+</html>
